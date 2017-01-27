@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Scanner</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <button ion-button block color="primary" (click)="scanDocument()">Click to Scan</button>
+
+    <ion-list [hidden]="!isRead">
+       <ion-item>
+           <p>
+            Text:&nbsp;&nbsp; {{detail}}
+           </p>
+       </ion-item>
+       <ion-item>
+           <p>
+            Format:&nbsp;&nbsp; {{format}}
+           </p>
+       </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Detail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+   
+    <ion-card >
+        
+         <h2>{{item.title}}</h2>
+        <img src="{{item.urlToImage}}" />
+        <ion-card-content> 
+            <!--<div class="card-subtitle item textWrap">{{item.title}}</div>-->
+            <p>
+                {{item.description}}                
+            </p>
+            <ion-list>
+          <ion-item>
+              
+              <ion-icon name="person" item-left></ion-icon> 
+              Author             
+              <ion-note>
+                  {{item.author}}
+              </ion-note>
+          </ion-item>
+             
+          <ion-item>
+              <ion-icon name="calendar" item-left></ion-icon> 
+              Date             
+              <ion-note>
+                  {{item.publishedAt | date: 'dd-MM-yyyy'}}
+              </ion-note>
+          </ion-item>
+        </ion-list>
+        <a ion-button block target="_blank" href="{{item.url}}">Read Full Article</a>
+        </ion-card-content>
+    </ion-card>
+      
+</ion-content>

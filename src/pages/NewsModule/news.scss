@@ -1,0 +1,15 @@
+news{
+   .textWrap {
+    overflow: hidden;
+    text-overflow: ellipsis;    
+  }
+
+  .textBreak{
+    word-break: break-all;
+    white-space: normal;
+  }
+
+  .Margin0{
+    margin:0 !important;
+  } 
+}

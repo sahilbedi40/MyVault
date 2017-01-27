@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Tracks</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item *ngFor="let item of items">
+            <ion-thumbnail item-left>
+            <img src="{{item.track_image_file}}" />
+            </ion-thumbnail>
+            <h2>{{item.track_title}}</h2>
+            <p>
+                <ion-icon name="thumbs-up" item-left></ion-icon>
+                Like &nbsp;<ion-note>{{item.track_favorites}}</ion-note>
+                &nbsp;&nbsp;<ion-icon name="chatboxes" item-left></ion-icon>
+                Comments &nbsp;
+                <ion-note>
+                    {{item.track_comments}}
+                </ion-note>
+            </p>
+            <audio controls>                
+                <source src="http://play.ve.vc/play/48/282562/Angreji Wali Madam-_-Kulwinder Billa_www.DjPunjab.Com.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        </ion-item>
+</ion-list>
+</ion-content>
